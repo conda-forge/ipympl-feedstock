@@ -1,5 +1,5 @@
-{% set version = "0.0.3" %}
-{% set sha256 = "979f034ffbdfafc189afad4b974ce1b90719a0ab9afdfbe886dd98c541f6f5fd" %}
+{% set version = "0.0.5" %}
+{% set sha256 = "a1a3d1b2baaaac09778f2e2e4bd81cb54a1c78b99bc6b68cba668f6cc3820955" %}
 
 package:
     name: ipympl
@@ -20,7 +20,7 @@ requirements:
         - setuptools
     run:
         - python
-        - ipywidgets >=5.1.5
+        - ipywidgets >=6.0.0
         - matplotlib >=2.0.0
 
 test:
@@ -30,6 +30,8 @@ test:
 about:
     home: https://github.com/matplotlib/jupyter-matplotlib
     license: BSD 3-Clause
+    license_family: BSD
+    license_file: LICENSE
     summary: Matplotlib Jupyter Extension
 
 extra:
