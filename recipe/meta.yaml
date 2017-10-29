@@ -1,5 +1,5 @@
-{% set version = "0.0.5" %}
-{% set sha256 = "a1a3d1b2baaaac09778f2e2e4bd81cb54a1c78b99bc6b68cba668f6cc3820955" %}
+{% set version = "0.0.6" %}
+{% set sha256 = "9502da63122bbb2192074137b6cee4299a9f4ae3081e33ba035c46feb4debb74" %}
 
 package:
     name: ipympl
@@ -12,6 +12,7 @@ source:
 
 build:
     number: 0
+    noarch: python
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -20,7 +21,7 @@ requirements:
         - setuptools
     run:
         - python
-        - ipywidgets >=6.0.0
+        - ipywidgets >=7.0.0
         - matplotlib >=2.0.0
 
 test:
@@ -39,3 +40,4 @@ extra:
     - JasonGrout
     - SylvainCorlay
     - tacaswell
+    - blink1073
