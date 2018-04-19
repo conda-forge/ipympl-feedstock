@@ -9,18 +9,21 @@ source:
     fn: ipympl-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/i/ipympl/ipympl-{{ version }}.tar.gz
     sha256: {{ sha256 }}
+    patches:
+        - 0001-Fixup-post-link.patch
 
 build:
-    number: 1
+    number: 2
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
     build:
         - python
         - setuptools
+        - jupyter
     run:
         - python
-        - ipywidgets >=7.0.0
+        - ipywidgets >=7.0.0,<8.0
         - matplotlib >=2.0.0
 
 test:
