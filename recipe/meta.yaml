@@ -1,5 +1,5 @@
-{% set version = "0.1.0" %}
-{% set sha256 = "c8754526684840f5a39efb44ba73d7ac8cde18583b5fe4b6479a044547750ad2" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "8edd833db0fe174794893520ed257055a661c607a035df8847c54deb35f4789f" %}
 
 package:
     name: ipympl
@@ -13,7 +13,7 @@ source:
         - 0001-Fixup-post-link.patch
 
 build:
-    number: 2
+    number: 0
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
