@@ -1,5 +1,5 @@
-{% set version = "0.1.1" %}
-{% set sha256 = "8edd833db0fe174794893520ed257055a661c607a035df8847c54deb35f4789f" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "18c4cb1ea88f743e59c3802733d9d151f3b0c1eebf3aca54a3b0b5429e56a70e" %}
 
 package:
     name: ipympl
@@ -22,7 +22,9 @@ requirements:
     run:
         - python
         - ipywidgets >=7.0.0,<8.0
+        - ipykernel >=4.7
         - matplotlib >=2.0.0
+        - six
 
 test:
     imports:
