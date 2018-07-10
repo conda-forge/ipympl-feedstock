@@ -14,16 +14,15 @@ Summary: Matplotlib Jupyter Extension
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ipympl-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ipympl-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/ipympl-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ipympl-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ipympl-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ipympl-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/ipympl-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/ipympl-feedstock)
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-ipympl-green.svg)](https://anaconda.org/conda-forge/ipympl)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ipympl.svg)](https://anaconda.org/conda-forge/ipympl)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/ipympl.svg)](https://anaconda.org/conda-forge/ipympl)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ipympl.svg)](https://anaconda.org/conda-forge/ipympl)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ipympl-green.svg)](https://anaconda.org/conda-forge/ipympl) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ipympl.svg)](https://anaconda.org/conda-forge/ipympl) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ipympl.svg)](https://anaconda.org/conda-forge/ipympl) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ipympl.svg)](https://anaconda.org/conda-forge/ipympl) |
 
 Installing ipympl
 =================
