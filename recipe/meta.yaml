@@ -19,6 +19,7 @@ requirements:
         - python
         - setuptools
         - jupyter
+        - pip
     run:
         - python
         - ipywidgets >=7.0.0,<8.0
