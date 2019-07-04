@@ -1,5 +1,5 @@
-{% set version = "0.2.1" %}
-{% set sha256 = "48ede51641bee78c32994cbd86b385714d61beb7d80c87f0cc1b70efb51dd5f5" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "3b05ec34d5f3c0c301c5bcad7ceeb79faa04158fb61aba550babdca8eadb9813" %}
 
 package:
     name: ipympl
@@ -11,7 +11,8 @@ source:
     sha256: {{ sha256 }}
 
 build:
-    number: 1002
+    number: 0
+    noarch: python
     script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -24,7 +25,7 @@ requirements:
         - python
         - ipywidgets >=7.0.0,<8.0
         - ipykernel >=4.7
-        - matplotlib-base >=2.0.0
+        - matplotlib-base >=2.2.0
         - six
 
 test:
