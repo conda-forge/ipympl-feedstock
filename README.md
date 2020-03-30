@@ -1,7 +1,7 @@
 About ipympl
 ============
 
-Home: https://github.com/matplotlib/jupyter-matplotlib
+Home: https://github.com/matplotlib/ipympl
 
 Package license: BSD 3-Clause
 
