@@ -1,4 +1,5 @@
 {% set version = "0.5.6" %}
+{% set js_version = "0.7.2" %}
 {% set sha256 = "076240e606f4dc1f23b7ecc3303c759f5718dc16f9a119382776c6cb382a53e9" %}
 
 package:
@@ -11,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -31,9 +32,16 @@ requirements:
 test:
   imports:
     - ipympl
+  commands:
+    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/extension.js                                     # [unix]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/index.js                                         # [unix]
+    - test -f ${PREFIX}/share/jupyter/lab/extensions/jupyter-matplotlib-{{ js_version }}.tgz                              # [unix]
+    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\extension.js (exit 0) else (exit 1)         # [win]
+    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\index.js (exit 0) else (exit 1)             # [win]
+    - if exist %PREFIX%\\share\\jupyter\\lab\\extensions\\jupyter-matplotlib-{{ js_version }}.tgz (exit 0) else (exit 1)  # [win]
 
 about:
-  home: https://github.com/matplotlib/jupyter-matplotlib
+  home: https://github.com/matplotlib/ipympl
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
