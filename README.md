@@ -5,7 +5,7 @@ Home: https://github.com/matplotlib/ipympl
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Matplotlib Jupyter Extension
 
