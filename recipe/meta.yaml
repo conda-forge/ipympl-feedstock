@@ -1,6 +1,6 @@
-{% set version = "0.5.7" %}
+{% set version = "0.5.8" %}
 {% set js_version = "0.7.3" %}
-{% set sha256 = "a5e7e8bdc5e97e6397b8507cbbea01c711f770eba903ea87bb5b00bbf4525a32" %}
+{% set sha256 = "0e2f2e540a2dfea61524b7993fc8552c9236b1aaa3826e1f382c75cb2fa5c382" %}
 
 package:
   name: ipympl
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
