@@ -1,6 +1,5 @@
-{% set version = "0.5.8" %}
-{% set js_version = "0.7.4" %}
-{% set sha256 = "0e2f2e540a2dfea61524b7993fc8552c9236b1aaa3826e1f382c75cb2fa5c382" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "fa032a794c48a246921abefca0b639051b2029de18dd632b571ede8b42558155" %}
 
 package:
   name: ipympl
@@ -18,13 +17,15 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.6
     - setuptools
-    - jupyter
+    - nodejs
+    - jupyterlab =3
+    - jupyter-packaging
     - pip
   run:
-    - python
-    - ipywidgets >=7.5.0,<8.0
+    - python >=3.6
+    - ipywidgets >=7.6.0,<8.0
     - ipykernel >=4.7
     - matplotlib-base >=2.2.0
     - six
@@ -33,16 +34,16 @@ test:
   imports:
     - ipympl
   commands:
-    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/extension.js                                     # [unix]
-    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/index.js                                         # [unix]
-    - test -f ${PREFIX}/share/jupyter/lab/extensions/jupyter-matplotlib-{{ js_version }}.tgz                              # [unix]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\extension.js (exit 0) else (exit 1)         # [win]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\index.js (exit 0) else (exit 1)             # [win]
-    - if exist %PREFIX%\\share\\jupyter\\lab\\extensions\\jupyter-matplotlib-{{ js_version }}.tgz (exit 0) else (exit 1)  # [win]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/extension.js                               # [unix]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/index.js                                   # [unix]
+    - test -f ${PREFIX}/share/jupyter/labextensions/jupyter-matplotlib/package.json                              # [unix]
+    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\extension.js (exit 0) else (exit 1)   # [win]
+    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\index.js (exit 0) else (exit 1)       # [win]
+    - if exist %PREFIX%\\share\\jupyter\\labextensions\\jupyter-matplotlib\\package.json (exit 0) else (exit 1)  # [win]
 
 about:
   home: https://github.com/matplotlib/ipympl
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Matplotlib Jupyter Extension
