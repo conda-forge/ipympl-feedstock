@@ -1,5 +1,5 @@
-{% set version = "0.6.1" %}
-{% set sha256 = "fa032a794c48a246921abefca0b639051b2029de18dd632b571ede8b42558155" %}
+{% set version = "0.6.2" %}
+{% set sha256 = "e285e399f9e0e1c3332a7c135c8ce14358f234e3309e9c0d937bf0cb131dd9cc" %}
 
 package:
   name: ipympl
