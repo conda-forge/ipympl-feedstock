@@ -1,5 +1,5 @@
-{% set version = "0.6.2" %}
-{% set sha256 = "e285e399f9e0e1c3332a7c135c8ce14358f234e3309e9c0d937bf0cb131dd9cc" %}
+{% set version = "0.6.3" %}
+{% set sha256 = "bf2a33863ec9025d6d767f09b9f36dd8f7fe80d1f8f5ba08fca9f4e460ee64f8" %}
 
 package:
   name: ipympl
@@ -19,8 +19,6 @@ requirements:
   build:
     - python >=3.6
     - setuptools
-    - nodejs
-    - jupyterlab =3
     - jupyter-packaging
     - pip
   run:
@@ -34,12 +32,12 @@ test:
   imports:
     - ipympl
   commands:
-    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/extension.js                               # [unix]
-    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/index.js                                   # [unix]
-    - test -f ${PREFIX}/share/jupyter/labextensions/jupyter-matplotlib/package.json                              # [unix]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\extension.js (exit 0) else (exit 1)   # [win]
-    - if exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\index.js (exit 0) else (exit 1)       # [win]
-    - if exist %PREFIX%\\share\\jupyter\\labextensions\\jupyter-matplotlib\\package.json (exit 0) else (exit 1)  # [win]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/extension.js                     # [unix]
+    - test -f ${PREFIX}/share/jupyter/nbextensions/jupyter-matplotlib/index.js                         # [unix]
+    - test -f ${PREFIX}/share/jupyter/labextensions/jupyter-matplotlib/package.json                    # [unix]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\extension.js (exit 1)   # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\nbextensions\\jupyter-matplotlib\\index.js (exit 1)       # [win]
+    - if not exist %PREFIX%\\share\\jupyter\\labextensions\\jupyter-matplotlib\\package.json (exit 1)  # [win]
 
 about:
   home: https://github.com/matplotlib/ipympl
