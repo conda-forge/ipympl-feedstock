@@ -1,5 +1,5 @@
-{% set version = "0.8.4" %}
-{% set sha256 = "fc799bc9d3482443d0cb54abc7c8d407e2773497de8ac1e079a0366d2073cbc0" %}
+{% set version = "0.8.5" %}
+{% set sha256 = "bebc6b8b7177d6e9fbc02235060e3fe0ee758f3b00ec5b9c8398f8ede1c4c369" %}
 
 package:
   name: ipympl
@@ -25,10 +25,13 @@ requirements:
     - pip
   run:
     - python >=3.6
+    - ipython <8
+    - numpy
+    - ipython_genutils
+    - pillow
+    - traitlets <6
     - ipywidgets >=7.6.0,<8.0
-    - ipykernel >=4.7
-    - matplotlib-base >=2.2.0
-    - six
+    - matplotlib-base >=2.2.0,<4
 
 test:
   imports:
