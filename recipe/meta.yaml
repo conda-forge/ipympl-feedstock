@@ -1,5 +1,5 @@
-{% set version = "0.9.1" %}
-{% set sha256 = "64096900c6392d53761a68ef6dd07541cc75672f9c3f84a3bb44bf8f9bbc3787" %}
+{% set version = "0.9.2" %}
+{% set sha256 = "c865c1992248f9966fbe4b6006239ae2959b00fc7e887ae32b0bd389808f0f8b" %}
 
 package:
   name: ipympl
@@ -30,7 +30,7 @@ requirements:
     - ipython_genutils
     - pillow
     - traitlets <6
-    - ipywidgets >=7.6.0,<8.0
+    - ipywidgets >=7.6.0,<9
     - matplotlib-base >=2.2.0,<4
 
 test:
