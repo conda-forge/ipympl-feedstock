@@ -21,6 +21,7 @@ requirements:
     - setuptools
     - hatchling
     - hatch-nodejs-version
+    - hatch-jupyter-builder
     - yarn
     - jupyterlab =4
     - pip
