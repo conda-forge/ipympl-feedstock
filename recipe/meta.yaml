@@ -19,9 +19,10 @@ requirements:
   host:
     - python >=3.6
     - setuptools
-    - jupyter-packaging =0.7
+    - hatchling
+    - hatch-nodejs-version
     - yarn
-    - jupyterlab =3
+    - jupyterlab =4
     - pip
   run:
     - python >=3.6
