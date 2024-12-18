@@ -1,5 +1,5 @@
-{% set version = "0.9.4" %}
-{% set sha256 = "cfb53c5b4fcbcee6d18f095eecfc6c6c474303d5b744e72cc66e7a2804708907" %}
+{% set version = "0.9.5" %}
+{% set sha256 = "b702db4bd1138cee21ab3c731e1c1bc5c3efbfa81b9b42a1820f79122d946dc8" %}
 
 package:
   name: ipympl
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
