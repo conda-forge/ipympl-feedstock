@@ -29,11 +29,10 @@ requirements:
     - python >={{ python_min }}
     - ipython <10
     - numpy
-    - ipython_genutils
     - pillow
     - traitlets <6
     - ipywidgets >=7.6.0,<9
-    - matplotlib-base >=2.2.0,<4
+    - matplotlib-base >=3.5.0,<4
 
 test:
   requires:
