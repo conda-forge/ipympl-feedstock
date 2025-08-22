@@ -63,7 +63,9 @@ tests:
 
 about:
   license: BSD-3-Clause
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - ipympl/labextension/static/third-party-licenses.json
   summary: Matplotlib Jupyter Extension
   homepage: https://github.com/matplotlib/ipympl
 
