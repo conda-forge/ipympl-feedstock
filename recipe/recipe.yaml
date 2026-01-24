@@ -2,11 +2,13 @@
 schema_version: 1
 
 context:
-  version: "0.9.8"
+  version: "0.10.0"
   # build against the oldest available 4.0.x to avoid spurious `etc/jupyter/labconfig/page_config.json`
   jupyterlab_host_version: "4.0"
   # test against the latest supported version
   jupyterlab_test_version: "4"
+  # ensure solve- and import-ability against some concrete, recent python
+  python_check_max: "3.14"
 
 package:
   name: ipympl
@@ -14,7 +16,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/i/ipympl/ipympl-${{ version }}.tar.gz
-  sha256: 6d7230d518384521093f3854f7db89d069dcd9c28a935b371e9c9f126354dee1
+  sha256: eda69602a010af2a42e8ebd069b0ee0dbe8df7fc69d7c1e8b99fece0a2fe613f
 
 build:
   number: 0
@@ -46,7 +48,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
   - package_contents:
       files:
         - share/jupyter/nbextensions/jupyter-matplotlib/extension.js
@@ -58,7 +60,7 @@ tests:
         - jupyterlab ${{ jupyterlab_test_version }}.*
     script:
       - jupyter labextension list --debug
-      # can't test the npm version as it does not align with the pypi version
+      # can't test the npm version as it does not align with the PyPI version
       - jupyter labextension list --debug 2>&1 | python -c "import sys, re; assert re.search('jupyter-matplotlib.*enabled.*OK', sys.stdin.read())"
 
 about:
@@ -67,7 +69,9 @@ about:
     - LICENSE
     - ipympl/labextension/static/third-party-licenses.json
   summary: Matplotlib Jupyter Extension
-  homepage: https://github.com/matplotlib/ipympl
+  homepage: https://pypi.org/project/ipympl
+  repository: https://github.com/matplotlib/ipympl
+  documentation: https://matplotlib.org/ipympl
 
 extra:
   recipe-maintainers:
