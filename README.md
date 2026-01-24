@@ -3,11 +3,15 @@ About ipympl-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipympl-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/matplotlib/ipympl
+Home: https://pypi.org/project/ipympl
 
 Package license: BSD-3-Clause
 
 Summary: Matplotlib Jupyter Extension
+
+Development: https://github.com/matplotlib/ipympl
+
+Documentation: https://matplotlib.org/ipympl
 
 Current build status
 ====================
